@@ -1,6 +1,5 @@
 import React from 'react'
 
-
 export default function Main(){
 
     const [one,setOne]=React.useState('f')
@@ -12,13 +11,16 @@ export default function Main(){
     const [code,setCode] = React.useState('#')
     // const [color,setColor] = React.useState('')
 
-    // console.log('#'+one+two+three+four+five+six)
     React.useEffect(()=>{
         setCode(prevCode=>{return ('#'+one+two+three+four+five+six)})
         // setColor(prev => {
         //      return ntc.name(code)[1]
         // })
     },[one,two,three,four,five,six])
+
+    
+
+
 
     function incrOne(){
         setOne(prev=>{
@@ -279,8 +281,7 @@ setSix(prev=>{
             <div className="center_div">
                 <h1 style={{backgroundColor:"midColor",borderTopLeftRadius: '30px', borderTopRightRadius: '30px'}} >"{code}"</h1>
                 <form>
-                {/* <input type='text' id='search' className='search-bar' placeholder='Serch Color Name'></input> */}
-
+                <input type='text' id='search' className='search-bar' placeholder='Serch Color Name'></input>
                 <div className="btn_div">
                      <div className='field-div'>   
                      <button type="button" id='d1' onClick={()=>{incrOne()}}  className='field-btn'>+</button>   
@@ -313,7 +314,7 @@ setSix(prev=>{
                     <button type="button" id='i6' onClick={()=>{decrSix()}} className='field-btn'>-</button>   
                     </div>
                 </div>
-                {/* <button onClick={()=>{}} className='submit-btn'>Get Color Code</button> */}
+                <button onClick={()=>{}} className='submit-btn'>Get Color Code</button>
 
                 </form>
 
